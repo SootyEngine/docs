@@ -1,6 +1,6 @@
 ---
 title: Music
-parent: Scenes
+parent: Resources
 nav_order: 2
 ---
 

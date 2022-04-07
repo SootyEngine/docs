@@ -1,6 +1,6 @@
 ---
-title: Sprite Animations
-parent: Visual Novels
+title: Sprite animations
+parent: Visual novels
 nav_order: 10
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Sound effects
-parent: Scenes
+parent: Resources
 nav_order: 3
 ---
 

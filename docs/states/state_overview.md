@@ -4,19 +4,37 @@ parent: States
 nav_order: -1
 ---
 
-## Adding state data
+# State overview
+{: .no_toc }
+
 State data is what will be saved from play to play. Things like score, health, character stats, achievements, unlockables...
 
-|Type|Data that will...|Folder|Autoload|Examples|
-|----|-----------|:------:|:----:|:-----------------------:|
-|Temporary|Change on each playthrough.|`res://states`|`State`|Score<br>Health<br>Stats|
-|Persistent|Stay the same regardless of playthrough.|`res://persistent`|`Persistent`|Achievements<br>Unlockables|
+|Autoload|Data that will...|Folder|Examples|
+|--------|-----------------|:----:|:------:|
+|`State`|Change on each playthrough.|`res://states`|Score<br>Health<br>Stats|
+|`Persistent`|Stay the same each playthrough.|`res://persistent`|Achievements<br>Unlockables|
 
-Simply create one or more scripts in the appropriate folder, extending any `Node`, and initialize like any other variable.  
-These nodes are created at startup and added to their autoload (State or Persistent) and should only be accessed through their Autoload parent.
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+## Adding state data
+
+- Create a script extending a `Node`.
+- Initialize your variables.
+- Add any functions you may want.
+- Save to `res://states/`
+- Done
+
+This data will be available in script, and will automatically save if changed.
+
+*Alternatively there are [`.soda` files](#docs/states/data_files.md).*
 
 ```gd
-# my_states.gd
+#my_states.gd
 
 extends Node
 
@@ -65,34 +83,6 @@ They can be accessed at:
 - `State` in Godot: `State.characters.paul.name`.
 - `~` in dialogue: `~characters.paul.name`
 
-
-## Initializing the state
-Create a script in `res://states` that extends any `Node`.  
-On startup, Sooty will add all scripts in this folder as children of the `State` node.  
-All of their properties and functions are now accessible to the scripting system.
-
-```gd
-#state.gd
-
-extends Node
-
-var score := 0
-
-func my_score():
-	return "[b]%s[]" % score
-
-func boost_score(amount := 1):
-	score += amount
-```
-```
-#story.soot
-
-My score is [$my_score].
-
-$boost_score 1234567
-
-My score plus 1,234,567 is [$score].
-```
 
 ## Saving
 Sooty will automatically save any values that changed, and only values that changed.

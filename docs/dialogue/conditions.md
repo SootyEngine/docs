@@ -12,18 +12,18 @@ nav_order: 2
 ## Table of contents
 {: .no_toc .text-delta }
 
-1.TOC
+1. TOC
 {:toc}
 
 
 ## Overview
 
 |Head|Description|Example|
-|---------|-----------|-------|
-|`if` or empty|The classic *if* statement. You don't need to type *if* though.|`{% raw %}{{if apples > oranges}}{% endraw %}` `{% raw %}{{apples > oranges}}{% endraw %}`|
-|`elif`|If the previous condition failed, this one will be checked.|`{% raw %}{{elif apples > pears}}{% endraw %}`|
-|`else`|If all other conditions failed, this will occur.`{% raw %}{{else}}{% endraw %}`|
-|`match`|A condensed pattern.|`{% raw %}{{match apples}}{% endraw %}`|
+|----|-----------|-------|
+|`if` or empty|The classic *if* statement. You don't need to type *if* though.|{% raw %}`{{if apples > oranges}}`{% endraw %} {% raw %}`{{apples > oranges}}`{% endraw %}|
+|`elif`|If the previous condition failed, this one will be checked.|{% raw %}`{{elif apples > pears}}`{% endraw %}|
+|`else`|If all other conditions failed, this will occur.{% raw %}`{{else}}`{% endraw %}|
+|`match`|A condensed pattern.|{% raw %}`{{match apples}}`{% endraw %}|
 
 ## Match
 

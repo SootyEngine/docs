@@ -1,6 +1,6 @@
 ---
 title: Scenes
-parent: Scenes
+parent: Resources
 nav_order: 0
 ---
 
