@@ -20,7 +20,7 @@ Everything is treated as a mod.
 
 |Folder|File type(s)|Desc|
 |:-----|-----------:|:---|
-|`dialogue/`| `.soot`|[Dialogue files](../dialogue/dialogue.md)|
+|`dialogue/`| `.soot`|[Dialogue files](../dialogue/dialogue_files.md)|
 |`lang/`|`.sola`|[Translation files](../translations/lang_files.md)|
 |`states/`| `.gd` `.soda`|Node scripts or [data files](./data_files.md)|
 |`persistent/`| `.gd` `.soda`|Node scripts or [data files](./data_files.md)|

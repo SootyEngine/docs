@@ -19,7 +19,6 @@ nav_order: -1
 ```
 Text without a speaker.
 
-# Speakers.
 john: Text spoken by John.
 : Text spoken by last speaker, John.
 
@@ -28,12 +27,12 @@ john: Text spoken by John.
 ## Speakers
 Text with a `:` before it will have a speaker tag
 ```
-mary: What year is it?`
+mary: What year is it?
 ```
 
 When no name is given, it will use the last one:
 ```
-jane: As I was saying;
+jane: As I was saying...
 : These things happen for a reason.
 ```
 
@@ -84,7 +83,7 @@ Some [b;tomato]bold red text[] and some [i;deep_sky_blue]italic blue text.[]
 
 ## Inserting state values
 
-BBCode tags starting with `~` will display an evaluation.
+BBCode tags starting with `~` will evaluate as an evaluation.
 
 ```
 Two plus two equals [~2+2].
@@ -93,7 +92,7 @@ Double my score is [~score * 2].
 Stylize score as bold and red [~score;b;red].
 ```
 
-The values can also be piped into a state function with `|`.
+Values can be *piped* into a function with `|`.
 ```
 jane: I have over [~jane.money|commas] dollars!
 ```
@@ -105,7 +104,9 @@ return State.commas(State.jane.money)
 
 ## Animation control
 
-The caption animation can be paused, sped up, or held till user input. See [BBCode Evolved®](./bbcode_evolved.md) for more info.
+The caption animation can be paused, sped up, or held till user input.
+
+[Learn more](./bbcode_evolved.md#animation-control-tags).
 
 ```
 We can pause[wait] the text.
@@ -121,7 +122,21 @@ Actions can be called at a point [!@camera zoom 2.0]. Got it?
 Like any other tag [!@camera zoom;!@camera shake;!~score += 20] you can combine multiple in one.
 ```
 
-## Multiline dialogue
+## Calling node functions inline
+You can include node actions in `()`:
+
+[Learn more](./node_actions.md)
+
+```
+john (jump): What was that!
+
+# is like doing:
+
+@john.jump
+john: What was that!
+```
+
+## Multi-line dialogue
 For blocks of text where you want whitespace preserved there is `""""`:
 ```
 """"
