@@ -10,8 +10,8 @@ nav_order: 20
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
 
 ## Adding state data
 State data is what will be saved from play to play. Things like score, health, character stats, achievements, unlockables...

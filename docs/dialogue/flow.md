@@ -12,8 +12,8 @@ A flow is a set of actions to call one after another, like, displaying a caption
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
 
 ## Writing
 To go to another flow in the file, use `=> other_flow`.

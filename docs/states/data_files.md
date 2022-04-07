@@ -18,8 +18,8 @@ They can be accessed at:
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
 
 ## Auto type conversion
 Data is auto converted to whatever type is at the path destination.  

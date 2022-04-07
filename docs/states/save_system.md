@@ -12,8 +12,8 @@ Sooty aims to handle the entire save system with nothing on your part. But here 
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-  {:toc}
+1. TOC
+{:toc}
 
 ## What is saved?
 Any kind of property can be saved, including built in Godot types like Vector2 and Color, and even complex Objects and Resources.  

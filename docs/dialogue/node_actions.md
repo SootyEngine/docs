@@ -17,6 +17,13 @@ mary: What was that!?
 
 jane: We better get out of here.
 ```
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 ## Adding node actions
 There are two ways the `@` action works:

@@ -13,8 +13,8 @@ nav_order: 10
 
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
 
 ## Symbol overview
 

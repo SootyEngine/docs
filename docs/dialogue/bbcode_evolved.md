@@ -10,8 +10,8 @@ nav_order: 0
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
 
 ## Common Tags
 Any number of tags can be chained together with `;` in the same brackets: `[b;tomato]Bold Red Text[]`

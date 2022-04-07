@@ -10,8 +10,8 @@ nav_order: 100
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
 
 ## Projects
 - [Visual novel template](https://github.com/teebarjunk/sooty-visual_novel)

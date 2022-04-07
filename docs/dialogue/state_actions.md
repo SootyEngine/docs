@@ -10,8 +10,8 @@ nav_order: 30
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
 
 ## Adding state actions
 Create a script in `res://states/` extending a `Node`, and define your functions and variables.

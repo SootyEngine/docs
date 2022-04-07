@@ -14,8 +14,8 @@ Everything is treated as a mod.
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
 
 ## Directories
 

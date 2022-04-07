@@ -10,8 +10,8 @@ nav_order: 3
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
 
 ## Writing
 To add options to dialogue, tab lines below, starting with a `-`.

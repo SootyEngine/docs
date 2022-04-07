@@ -14,5 +14,5 @@ Translation data in `res://lang/` will be auto loaded:
 ## Table of contents
 {: .no_toc .text-delta }
 
-- TOC
-   {:toc}
+1. TOC
+{:toc}
