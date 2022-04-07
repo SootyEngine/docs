@@ -25,7 +25,7 @@ nav_order: 2
 |`{{elif}}`|If the previous condition failed, this one will be checked.|`{{elif apples > pears}}`|
 |`{{else}}`|If all other conditions failed, this will occur.`{{else}}`|
 |`{{match}}`|A condensed pattern.||
-<!-- {% unraw %} -->
+<!-- {% endraw %} -->
 
 ## Match
 
@@ -45,6 +45,6 @@ Sometimes they can be a lot nicer/neater that if-else statements.
         john: Aw yeah, friday!
     {{_}} It's the weekend.
 ```
-<!-- {% unraw %} -->
+<!-- {% endraw %} -->
 
 Soon this will support array and dict patterns.

@@ -63,7 +63,7 @@ Now we can access these in a `.soot` dialogue.
 
 
 ```
-<!-- {% unraw %} -->
+<!-- {% endraw %} -->
 
 ## Initializing the state
 Create a script in `res://states` that extends any `Node`.  
