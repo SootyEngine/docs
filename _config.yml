@@ -1,6 +1,5 @@
 title: Sooty Docs
 description: Docs for the Sooty dialogue system
-baseurl: /sooty-docs
 remote_theme: just-the-docs/just-the-docs
 plugins:
   - jemoji
