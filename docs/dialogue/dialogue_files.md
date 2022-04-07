@@ -61,7 +61,7 @@ My score\: [~score].
 
 The speaker tag(s) will be used to:
 - Look in `State`:
-- If it finds an object with `get_string` it calls `get_string("caption_name")`.
+- If it finds an object with `get_string` it calls `get_string("speaker_name")`.
 - If it finds an object without `get_string` it looks for a `name` field.
 - If it finds a string, it uses that.
 - Otherwise it just output itself.

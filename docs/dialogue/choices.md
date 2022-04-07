@@ -1,10 +1,10 @@
 ---
-title: Options
+title: Choices
 parent: Dialogue
 nav_order: 3
 ---
 
-# Options
+# Choices
 {: .no_toc }
 
 ## Table of contents
@@ -14,7 +14,7 @@ nav_order: 3
 {:toc}
 
 ## Writing
-To add options to dialogue, tab lines below, starting with a `-`.
+To add choices to dialogue, tab lines below, starting with a `-`.
 
 ```
 Are you sure about that?
@@ -48,7 +48,7 @@ journey_man: Where to, traveler?
 ```
 
 ## Conditions
-Options can have [`{% raw %}{{Conditions}}{% endraw %}`](./conditions.md).
+Choices can have [`{% raw %}{{Conditions}}{% endraw %}`](./conditions.md).
 
 ```
 guard: Sorry, can't let you in without the password.
@@ -80,6 +80,6 @@ While not advisable, as it's hard to read, you can use `(())` and `;;` to write 
 
 ```
 Where to?
-    - East. ((man: All right, east we go. ;; @sfx east ;; $dir = "east" )) => east
-    - North. ((man: Okay, north it is. ;; @sfx north ;; $dir = "north")) => north
+    - East. ((man: All right, east we go. ;; @sfx east ;; ~dir = "east" )) => east
+    - North. ((man: Okay, north it is. ;; @sfx north ;; ~dir = "north")) => north
 ```
