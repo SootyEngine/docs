@@ -29,8 +29,43 @@ Examples:
 @enemies_animate jump
 ```
 
+## Built in
+
+The following are built in.
+
+|Name|Desc|Example|
+|----|----|-------|
+|`@Music`|Music autoload.|`@Music.play song`<br>`@Music.stop_all`<br>`@Music.current`|
+|`@SFX`|Sound effects autoload.|`@SFX.play coin`
+|`@Scene`|Scene autoload.|`@Scene.goto`
+|`@scene`|Current scene.<br>Automatically set whenever a scene is made current.
+|`@msg`|Emits:<br>`Global.message(id: String, payload: Variant)`|`@msg msg_id true`
+|`@version`|Returns current Sooty version.|`@version`
+
+## Arguments
+Arguments are seperated by spaces.
+```
+@my_func abc true 10
+#my_func("abc", true, 10)
+```
+If you want to pass a string with spaces, wrap it in `""`
+```
+@msg "A message with spaces."
+#msg("A message with spaces.")
+```
+To pass an array, join items with `,`
+```
+@boost_health 10 jane,mary,paul
+#boost_health(10, ["jane", "mary", "paul"])
+```
+
+The last argument can be a `Dictionary` where items are separated by spaces, keys and values joined.
+```
+@damage 10 type:poison 2x:true tint:neon_green rand:3
+#damage(10, {"type": "poison", "2x": true, "tint": "neon_green", "rand": 3})
+```
 ## Adding node actions
-There are two ways to *bind* to a node action.
+There are two ways to add a node action.
 
 ![](/node_action_groups.png)
 
@@ -43,10 +78,10 @@ func _init():
   add_to_group("@.damage")
   add_to_group("@.heal")
 
-func _damage(amount: int, type: String, kwargs := {}):
+func damage(amount: int, type: String, kwargs := {}):
   pass
 
-func _heal(amount: int, kwargs := {}):
+func heal(amount: int, kwargs := {}):
   pass
 ```
 Now you can call `@damage` and `@heal` from a dialogue.
@@ -134,6 +169,15 @@ mary: I heard it too!
 
 @jump john,mary
 john mary: Woah!
+```
+
+# Properties
+When using `@` to request a property, it will only return the last Node's result.
+
+```
+# if there are multiple enemies, only the last one's result will show up here.
+
+Enemy health is [@enemy.get_health].
 ```
 
 # Type Conversion
