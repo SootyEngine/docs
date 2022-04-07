@@ -77,7 +77,7 @@ Some *italic*, **bold** and ***bold italic*** text.
 
 Sooty's BBCode works different, in that multiple tags can go inside a set of brackets. There are also a lot of new tags.
 
-[Learn more](/sooty-docs/docs/dialogue/bbcode_evolved.md)
+[Learn more](docs/dialogue/bbcode_evolved.md)
 ```
 Some [b;tomato]bold red text[] and some [i;deep_sky_blue]italic blue text.[]
 ```
@@ -105,7 +105,7 @@ return State.commas(State.jane.money)
 
 ## Animation control
 
-The caption animation can be paused, sped up, or held till user input. See [BBCode Evolved®](/sooty-docs/docs/dialogue/bbcode_evolved.md) for more info.
+The caption animation can be paused, sped up, or held till user input. See [BBCode Evolved®](bbcode_evolved.md) for more info.
 
 ```
 We can pause[wait] the text.

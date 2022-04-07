@@ -20,13 +20,13 @@ Everything is treated as a mod.
 
 |Folder|File type(s)|Desc|
 |:-----|-----------:|:---|
-|`dialogue/`| `.soot`|[Dialogue files](/sooty-docs/docs/dialogue.md)|
-|`lang/`|`.sola`|[Translation files](/sooty-docs/docs/translations/lang_files.md)|
-|`states/`| `.gd` `.soda`|Node scripts or [data files](/sooty-docs/docs/states/data_files.md)|
-|`persistent/`| `.gd` `.soda`|Node scripts or [data files](/sooty-docs/docs/states/data_files.md)|
-|`scenes/`| `.tscn` `.scn`|[Scenes](/sooty-docs/docs/resources/scenes.md)|
-|`audio/music/`| `.wav` `.mp3`, `.ogg`|[Music](/sooty-docs/docs/resources/music.md)|
-|`audio/sfx/`| `.wav` `.mp3`, `.ogg`|[Sound](/sooty-docs/docs/resources/sfx.md) effects|
+|`dialogue/`| `.soot`|[Dialogue files](dialogue/dialogue.md)|
+|`lang/`|`.sola`|[Translation files](translations/lang_files.md)|
+|`states/`| `.gd` `.soda`|Node scripts or [data files](states/data_files.md)|
+|`persistent/`| `.gd` `.soda`|Node scripts or [data files](states/data_files.md)|
+|`scenes/`| `.tscn` `.scn`|[Scenes](resources/scenes.md)|
+|`audio/music/`| `.wav` `.mp3`, `.ogg`|[Music](resources/music.md)|
+|`audio/sfx/`| `.wav` `.mp3`, `.ogg`|[Sound](resources/sfx.md) effects|
 
 ## User mods
 *TO WRITE UP*
