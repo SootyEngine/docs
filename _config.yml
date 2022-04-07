@@ -1,1 +1,19 @@
 remote_theme: just-the-docs/just-the-docs
+
+collections:
+  features:
+    sort_by: sort_rank
+    permalink: "/:collection/:path/"
+    output: true
+  visual_novel:
+    sort_by: sort_rank
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    features:
+      name: Features
+    visual_novel:
+      name: Visual Novel
