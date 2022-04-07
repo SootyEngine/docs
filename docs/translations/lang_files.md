@@ -1,9 +1,9 @@
 ---
-title: `.sola` Files
+title: Translation files
 parent: Translations
 ---
 
-# `.sola` files
+# Translation files `*.sola`
 
 ## Generating
 

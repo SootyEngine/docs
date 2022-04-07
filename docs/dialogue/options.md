@@ -1,6 +1,7 @@
 ---
 title: Options
 parent: Dialogue
+nav_order: 3
 ---
 
 # Options

@@ -1,9 +1,24 @@
 ---
-title: Node Actions
+title: Node actions
 parent: Dialogue
+nav_order: 20
 ---
 
-# Adding Node Actions
+## Node actions
+Node actions are a way to access functions and properties inside of `Nodes` that can be anywhere in the Godot `SceneTree`. Whether an Autoload, or a `current_scene` object. Any Node with a proper group can be called.
+
+Here is how calls can look in `.soot` script.
+```
+@SFX.play rumble
+
+mary: What was that!?
+
+@scene shake 3.0
+
+jane: We better get out of here.
+```
+
+# Adding node actions
 There are two ways the `@` action works:
 
 *Without a period:* `@action true 2.0`  
@@ -34,16 +49,16 @@ func _init():
     add_to_group("fade_in")
     add_to_group("fade_out")
 
-func action():
+func action(id := "default"):
     pass
 
 func reset():
     pass
 
-func fade_in():
+func fade_in(time := 1, color := "BLACK"):
     pass
 
-func fade_out():
+func fade_out(time := 1, color := "BLACK"):
     pass
 ```
 

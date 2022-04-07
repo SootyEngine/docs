@@ -1,7 +1,7 @@
 ---
 title: Visual Novels
 has_children: true
-nav_order: 1
+nav_order: 100
 ---
 
 ## Projects

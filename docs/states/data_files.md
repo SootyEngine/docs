@@ -1,9 +1,10 @@
 ---
 title: Data files
 parent: States
+nav_order: 0
 ---
 
-# `.soda` files
+# Data files `*.soda`
 Inspired by YAML, but designed for Godot, Sooty Data Files, or `.soda`, are a way to more easily define data.
 
 Store the files in `states/` or `persistent/` to have them auto install.  
