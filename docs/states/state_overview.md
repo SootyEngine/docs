@@ -33,7 +33,7 @@ State data is what will be saved from play to play. Things like score, health, c
 
 This data will be available in script, and will automatically save if changed.
 
-*Alternatively there are [`.soda` files](#docs/states/data_files.md).*
+*Alternatively there are [`.soda` files](/docs/states/data_files.md).*
 
 ```gd
 #my_states.gd

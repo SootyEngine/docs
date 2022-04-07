@@ -77,7 +77,7 @@ Some *italic*, **bold** and ***bold italic*** text.
 
 Sooty's BBCode works different, in that multiple tags can go inside a set of brackets. There are also a lot of new tags.
 
-[Learn more](#docs/dialogue/bbcode_evolved.md)
+[Learn more](/docs/dialogue/bbcode_evolved.md)
 ```
 Some [b;tomato]bold red text[] and some [i;deep_sky_blue]italic blue text.[]
 ```
@@ -146,7 +146,7 @@ Not now, not ever.
 """"
 ```
 
-If [translating](#docs/lang/lang_files.md), add the `#id=` on the first line.
+If [translating](/docs/lang/lang_files.md), add the `#id=` on the first line.
 ```
 paul: """"  #id=long_intro
 Once upon a time, a long time ago

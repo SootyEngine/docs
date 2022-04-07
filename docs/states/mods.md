@@ -20,13 +20,13 @@ Everything is treated as a mod.
 
 |Folder|File type(s)|Desc|
 |:-----|-----------:|:---|
-|`dialogue/`| `.soot`|[Dialogue files](#docs/dialogue.md)|
-|`lang/`|`.sola`|[Translation files](#docs/translations/lang_files.md)|
-|`states/`| `.gd` `.soda`|Node scripts or [data files](#docs/states/data_files.md)|
-|`persistent/`| `.gd` `.soda`|Node scripts or [data files](#docs/states/data_files.md)|
-|`scenes/`| `.tscn` `.scn`|[Scenes](#docs/resources/scenes.md)|
-|`audio/music/`| `.wav` `.mp3`, `.ogg`|[Music](#docs/resources/music.md)|
-|`audio/sfx/`| `.wav` `.mp3`, `.ogg`|[Sound](#docs/resources/sfx.md) effects|
+|`dialogue/`| `.soot`|[Dialogue files](/docs/dialogue.md)|
+|`lang/`|`.sola`|[Translation files](/docs/translations/lang_files.md)|
+|`states/`| `.gd` `.soda`|Node scripts or [data files](/docs/states/data_files.md)|
+|`persistent/`| `.gd` `.soda`|Node scripts or [data files](/docs/states/data_files.md)|
+|`scenes/`| `.tscn` `.scn`|[Scenes](/docs/resources/scenes.md)|
+|`audio/music/`| `.wav` `.mp3`, `.ogg`|[Music](/docs/resources/music.md)|
+|`audio/sfx/`| `.wav` `.mp3`, `.ogg`|[Sound](/docs/resources/sfx.md) effects|
 
 ## User mods
 *TO WRITE UP*

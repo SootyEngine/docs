@@ -48,7 +48,7 @@ journey_man: Where to, traveler?
 ```
 
 ## Conditions
-Options can have [`{% raw %}{{Conditions}}{% endraw %}`](#docs/dialogue/conditions.md).
+Options can have [`{% raw %}{{Conditions}}{% endraw %}`](/docs/dialogue/conditions.md).
 
 ```
 guard: Sorry, can't let you in without the password.

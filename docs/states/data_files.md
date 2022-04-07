@@ -85,7 +85,9 @@ my_data:
 ```
 
 ## Install address
-If you want to add a lot of items to a nested object, you can use the meta key `#.to: address.of.data`
+If you want to add a lot of items to a nested object, you can use the meta key
+
+`#.to: address.of.data`
 
 ```yaml
 #.to: characters.player.items
