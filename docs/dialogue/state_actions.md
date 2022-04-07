@@ -1,8 +1,17 @@
 ---
-title: State Actions
+title: State actions
 parent: Dialogue
 nav_order: 30
 ---
+
+# State actions
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
 
 ## Adding state actions
 Create a script in `res://states/` extending a `Node`, and define your functions and variables.
@@ -38,7 +47,7 @@ Now in a `.soot` script, these can be called in one of two ways.
 === scene_start
   # The shortcut way:
   My score is [$score], or stylized is [$score_styled] and with an argument [$score_styled RED].
-  
+
   # Or the evaluation way:
   My score is [~score], or stylized is [~score_styled()] and with an argument [~score_styled("RED")].
 ```

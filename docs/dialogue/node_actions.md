@@ -4,7 +4,7 @@ parent: Dialogue
 nav_order: 20
 ---
 
-## Node actions
+# Node actions
 Node actions are a way to access functions and properties inside of `Nodes` that can be anywhere in the Godot `SceneTree`. Whether an Autoload, or a `current_scene` object. Any Node with a proper group can be called.
 
 Here is how calls can look in `.soot` script.
@@ -18,7 +18,7 @@ mary: What was that!?
 jane: We better get out of here.
 ```
 
-# Adding node actions
+## Adding node actions
 There are two ways the `@` action works:
 
 *Without a period:* `@action true 2.0`  

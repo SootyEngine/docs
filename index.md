@@ -9,6 +9,4 @@ nav_order: 0
 
 It handles states, saving/loading, and translations, among other features.
 
-- [Dialogue](#docs/dialogue.md)
-- [States and Data](#docs/states.md)
-- [Translations](#docs/translations.md)
+![](/docs/preview.png)

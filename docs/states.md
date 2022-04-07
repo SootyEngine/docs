@@ -4,13 +4,16 @@ has_children: true
 nav_order: 20
 ---
 
-# Mods
-[About mods](#docs/states/mods.md)
+# States
+{: .no_toc }
 
-Everything is treated as a mod.  
-`res://` is loaded as if it were a mod.  
+## Table of contents
+{: .no_toc .text-delta }
 
-# Adding State Data
+- TOC
+   {:toc}
+
+## Adding state data
 State data is what will be saved from play to play. Things like score, health, character stats, achievements, unlockables...
 
 |Type|Data that will...|Examples|Folder|Autoload|
@@ -21,7 +24,7 @@ State data is what will be saved from play to play. Things like score, health, c
 Simply create one or more scripts in the appropriate folder, extending any *Node*, and initialize like any other variable.  
 These nodes are created at startup and added to their autoload (State or Persistent) and should only be accessed through their Autoload parent.
 
-```
+```gd
 # my_states.gd
 extends Node
 
@@ -41,6 +44,7 @@ func has_all_keys() -> bool:
 ```
 
 Now we can access these in a `.soot` dialogue.
+<!-- {% raw %} -->
 
 ```
 === the_rabbits_keys
@@ -59,6 +63,7 @@ Now we can access these in a `.soot` dialogue.
 
 
 ```
+<!-- {% unraw %} -->
 
 ## Initializing the state
 Create a script in `res://states` that extends any `Node`.  

@@ -4,76 +4,21 @@ has_children: true
 nav_order: 10
 ---
 
-# Basic dialogue
-
-```
-Text without a speaker.
-
-// Speakers.
-john: Text spoken by John.
-: Text spoken by last speaker, John.
-
-// Markdown formatting.
-Some *italic*, **bold** and ***bold italic*** text.
-
-// BBCode.
-Some [b;tomato]bold red text[] and some [i;deep_sky_blue]italic blue text.[]
-
-// Inserting state values to text.
-The current score is [$score;b;cyan].
-
-// Effecting the animation.
-We can pause[wait] the text.
-We can hold until the user presses something.[hold] And then show some more text.
-We can [pace=2]speed up the speed of the speaker.[pace=0.25] Or slow it down.
-
-// Calling actions at points in the animation.
-Actions can be called at a point [!@camera zoom 2.0]. Got it?
-Like any other tag [!@camera zoom;!@camera shake;!~score += 20] you can combine multiple in one.
-
-// Multiline text.
-""""
-You can place *lots* of formatted text in one block.
-        *Tabs*
-            will
-                be
-                    preserved.
-
-As will **whitespace**.
-""""
-
-// Multiline with a speaker and condition.
-paul: """" {{score > 20}}
-I don't care what [b]they[] say, it's not happening.
-
-    (He turned to look at the shore.)
-
-Not now, not ever.
-""""
-```
-
-## Speakers
-Text with a `:` before it will have a speaker tag: `mary: What year is it?`
-
-Multiple speakers can be included with a space: `john mary jane paul: We all agree!`
-
-Speaker names will be auto styled with state data:
-```
-# my_state.gd
-
-var john := Character.new({name="John", color=Color.DEEP_SKY_BLUE})
-```
-
-But you can wrap a name in `"` to have it as is: `"[b;gray]Mysterious Stranger[]": Howdy.`
-
-If you want a `:` in a users name, escape it with a `\:`.
-
-## Feature overview
-
-To get syntax highligting in Godot, open the file in editor and select `Edit > Syntax Highlighter > Soot`
+# Dialogue
+{: .no_toc }
 
 ![](highlighter.png)
 
+## Table of contents
+
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+
+## Symbol overview
+
+<!-- {% raw %} -->
 |Pattern|About|Example|
 |-----|-----|-------|
 |`# comment`|These are just for you, and are ignored by the system.|`// TODO: Rewrite these lines.`|
@@ -92,3 +37,4 @@ To get syntax highligting in Godot, open the file in editor and select `Edit > S
 |`$state.function`|Call's a state function.|`$player.damage 20 fire:true`|
 |`~state evaluation`|Evaluates an expression on state data.|`~score += 20 * score_multiplier(player.stats)`
 |`{{condition}}`|For only displaying lines that pass.|`mary: Oh wow, you brought it. {{talked_to_mary and player.item_count("spoon") > 1}}`|
+<!-- {% endraw %} -->

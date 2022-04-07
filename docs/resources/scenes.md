@@ -1,10 +1,9 @@
 ---
-title: Sprite Animations
-parent: Visual Novels
-nav_order: 1
+title: Scenes
+nav_order: 0
 ---
 
-# Sprite Animations
+# Scenes
 {: .no_toc }
 
 ## Table of contents

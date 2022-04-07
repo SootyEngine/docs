@@ -5,7 +5,15 @@ nav_order: 3
 ---
 
 # Options
+{: .no_toc }
 
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+
+## Writing
 To add options to dialogue, tab lines below, starting with a `-`.
 
 ```
@@ -17,6 +25,7 @@ Are you sure about that?
 
 You can write dialogue underneath these lines, so long as it's tabbed.
 
+<!-- {% raw %} -->
 ```
 journey_man: Where to, traveler?
     - East.
@@ -54,6 +63,7 @@ guard: Sorry, can't let you in without the password.
     - Oh, well, I don't know it.
         => back_to_street
 ```
+<!-- {% unraw %} -->
 
 ## Single line shortcuts
 

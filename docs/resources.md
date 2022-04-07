@@ -1,10 +1,10 @@
 ---
-title: Sprite Animations
-parent: Visual Novels
-nav_order: 1
+title: Resources
+has_children: true
+nav_order: 15
 ---
 
-# Sprite Animations
+# Resources
 {: .no_toc }
 
 ## Table of contents

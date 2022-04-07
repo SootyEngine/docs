@@ -1,11 +1,21 @@
 ---
-title: Flow Control
+title: Flow control
 parent: Dialogue
 nav_order: 1
 ---
 
-# Flow Control
+# Flow control
+{: .no_toc }
 
+A flow is a set of actions to call one after another, like, displaying a caption, playing a sound, changing the scene...
+
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+
+## Writing
 To go to another flow in the file, use `=> other_flow`.
 
 To call another flow, and then return to where we are, use `== other_flow`.  

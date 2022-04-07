@@ -5,6 +5,13 @@ nav_order: 0
 ---
 
 # BBCode Evolved
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
 
 ## Common Tags
 Any number of tags can be chained together with `;` in the same brackets: `[b;tomato]Bold Red Text[]`
