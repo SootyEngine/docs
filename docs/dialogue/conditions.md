@@ -18,14 +18,12 @@ nav_order: 2
 
 ## Overview
 
-<!-- {% raw %} -->
-|Condition|Description|Example|
+|Head|Description|Example|
 |---------|-----------|-------|
-|`{{if}}` or just `{{}}`|The classic *if* statement. You don't need to type *if* though.|`{{if apples > oranges}}` `{{apples > oranges}}`|
-|`{{elif}}`|If the previous condition failed, this one will be checked.|`{{elif apples > pears}}`|
-|`{{else}}`|If all other conditions failed, this will occur.`{{else}}`|
-|`{{match}}`|A condensed pattern.||
-<!-- {% endraw %} -->
+|`if` or empty|The classic *if* statement. You don't need to type *if* though.|`{% raw %}{{if apples > oranges}}{% endraw %}` `{% raw %}{{apples > oranges}}{% endraw %}`|
+|`elif`|If the previous condition failed, this one will be checked.|`{% raw %}{{elif apples > pears}}{% endraw %}`|
+|`else`|If all other conditions failed, this will occur.`{% raw %}{{else}}{% endraw %}`|
+|`match`|A condensed pattern.|`{% raw %}{{match apples}}{% endraw %}`|
 
 ## Match
 
@@ -33,8 +31,8 @@ Check out the Godot [explanation](https://docs.godotengine.org/en/latest/tutoria
 
 Sometimes they can be a lot nicer/neater that if-else statements.
 
-<!-- {% raw %} -->
 ```
+<!-- {% raw %} -->
 {{match time.weekday}}
     {{MONDAY}} @sfx sad_audio
     {{TUESDAY}} john: Glad [b]mondays[] over.
@@ -44,7 +42,7 @@ Sometimes they can be a lot nicer/neater that if-else statements.
     {{FRIDAY}} @sfx happy_audio
         john: Aw yeah, friday!
     {{_}} It's the weekend.
+    <!-- {% endraw %} -->
 ```
-<!-- {% endraw %} -->
 
 Soon this will support array and dict patterns.

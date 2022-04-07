@@ -29,9 +29,9 @@ Some tags are self closing.
 |`dim`|Dims color by 33%.||
 |`lit`|Lightens color by 33%.||
 |`hue` `sat` `val`|Modify hue/sat/val of color.||
-|`:emoji_name:` `:)`|Tags wrapped in `::` will use the emoji.<br>Some old fashioned emojis are supported. `[:)]`,||
+|`:emoji_name:` `:)`|Tags wrapped in `::` will use the emoji.<br>Some old fashioned emojis are supported. `[:)]`.<br>Requires an emoji font.||
 |`\|pipe`|Will pipe text through a function.||
-|`@group call` `$state call` `~expression`|Inserts returned value at this position.<br>Will auto close any style it's wrapped with:<br>`The [$stranger;b;red] looks at you.`<br>Can be piped to a function. `[$player.coins\|commas]`||
+|`@group func`<br>`$state func`<br>`~expression`|Inserts returned value at this position.<br>Will auto close any style it's wrapped with:<br>`The [$stranger;b;red] looks at you.`<br>Can be piped to a function. `[$player.coins\|commas]`||
 |`lb` `rb`|Insert brackets *[]*||
 ||||
 |`cuss`|||
@@ -57,18 +57,19 @@ Along with typical: `b` `i` `bi` `u`
 |`hold`|Hold animation till user action.|`[h]` `[hold]`|
 |`jump`|Jump animation forward. So entire word or phrase can pop in.<br>`I already told you [jump]NO[][w] [jump]MORE[][w] [jump]LEAVING MY THINGS OUT![][w]`
 |`pace`|Change pace of animation.|`[p]` `[pace]` `[p=2]`|
-|`!@group call` `!$state call` `!~expression`|Call any [action](#actions) at that point in the animation.||
+|`!@group func` `!$state func` `!~expression`|Call a function at this point in the animation.||
 
 ## Animation styles
 
 Instead of simply fading in text, maybe you want to bounce it in, or show it as a computer console being typed out.
 
 |Tag|Description|Options|
-|`back`|||
-|`console`|||
-|`fader`|||
-|`focus`|||
-|`prickle`|||
+|---|-----------|-------|
+|`back`|Bounces text in.||
+|`console`|Looks like an old computer UI.||
+|`fader`|Default.||
+|`focus`|Characters fly in from every direction.||
+|`prickle`|Characters fade in with random alpha offsets.||
 |`redact`|||
 |`wfc`|||
 
@@ -84,7 +85,7 @@ So can text: `I have [|commas]1234567[] apples.` -> `I have 1,234,567,apples.`
 
 You can spread functions across multiple scripts/nodes, but if there are multiple with the same name, only the first will be used.
 
-## Defining Shortcuts
+## Defining new tags
 In `config.cfg` you can set shortcuts for complex actions and custom colors:
 
 ```cfg

@@ -7,10 +7,6 @@ nav_order: 1
 # Mods
 {: .no_toc }
 
-Everything is treated as a mod.
-
-`res://` is loaded as if it were a mod.
-
 ## Table of contents
 {: .no_toc .text-delta }
 
@@ -18,6 +14,9 @@ Everything is treated as a mod.
 {:toc}
 
 ## Directories
+Everything is treated as a mod.
+
+`res://` is loaded as if it were a mod.
 
 |Folder|File type(s)|Desc|
 |:-----|-----------:|:---|

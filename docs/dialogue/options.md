@@ -25,7 +25,6 @@ Are you sure about that?
 
 You can write dialogue underneath these lines, so long as it's tabbed.
 
-<!-- {% raw %} -->
 ```
 journey_man: Where to, traveler?
     - East.
@@ -38,9 +37,9 @@ journey_man: Where to, traveler?
         => west
     - North.
         journey_man: The cost north is extra. Will you pay?
-            - Yes, here you go. {{money >= 5}}
+            - Yes, here you go. {% raw %}{{money >= 5}}{% endraw %}
                 $money -= 5
-            - I don't have money, but I need to get there. {{money < 5}}
+            - I don't have money, but I need to get there. {% raw %}{{money < 5}}{% endraw %}
                 journey_man: Meh, all right, let's go.
                 => north
             - Hmm, nevermind.
@@ -49,11 +48,11 @@ journey_man: Where to, traveler?
 ```
 
 ## Conditions
-Options can have [`{{Conditions}}`](#docs/dialogue/conditions.md).
+Options can have [`{% raw %}{{Conditions}}{% endraw %}`](#docs/dialogue/conditions.md).
 
 ```
 guard: Sorry, can't let you in without the password.
-    - Doop a doop. {{has_password}}
+    - Doop a doop. {% raw %}{{has_password}}{% endraw %}
         guard: Hmm.
         @sfx door_clanking_open
         => enter_the_club
@@ -63,7 +62,6 @@ guard: Sorry, can't let you in without the password.
     - Oh, well, I don't know it.
         => back_to_street
 ```
-<!-- {% endraw %} -->
 
 ## Single line shortcuts
 

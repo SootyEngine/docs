@@ -24,4 +24,4 @@ For each Object/Resource, a dictionary of properties (only those that have chang
 ## Save screen UI (Visual novel)
 If you add a property `var save_caption := "Save Name"` it will be shown on the save screen. This could be used to indicate to the player what location, mission, or progress, the slot's data contains. It could contain BBCode.
 
-![](/docs/states/save_screen.png)
+![](/save_screen.png)

@@ -1,5 +1,6 @@
 ---
-title: Scenes
+title: Sound effects
+parent: Scenes
 nav_order: 3
 ---
 

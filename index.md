@@ -9,4 +9,4 @@ nav_order: 0
 
 It handles states, saving/loading, and translations, among other features.
 
-![](/docs/preview.png)
+![](/preview.png)

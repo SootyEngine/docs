@@ -9,12 +9,6 @@ nav_order: 0
 
 Inspired by YAML, but designed for Godot, Sooty Data Files, or `.soda`, are a way to more easily define data.
 
-Store the files in `states/` or `persistent/` to have them auto install.  
-
-They can be accessed at:
-- `State` in Godot: `State.characters.paul.name`.
-- `~` in dialogue: `~characters.paul.name`
-
 ## Table of contents
 {: .no_toc .text-delta }
 
@@ -27,6 +21,7 @@ If the property has no explicit type, it will be assumed.
 
 ```gd
 #your_script.gd
+
 class_name Guy
 var name := ""
 var coin := 0
@@ -52,7 +47,7 @@ To make accessing nested properties easier, there are shortcuts.
 They begin with `~~` followed by an address.
 
 ```yaml
-# my_data.soda
+#my_data.soda
 
 ~~p: characters.player
 ~~coins: characters.player.inventory.coins
@@ -65,7 +60,7 @@ characters:
 ```
 Now dialogue can look neater.
 ```
-# my_dialogue.sooty
+#my_dialogue.sooty
 
 p: My name is [~p.name] and I have [~coins] coins.
 
@@ -100,7 +95,7 @@ shield: 1
 coin: 20_300
 ```
 Is the same as doing:
-```YAML
+```yaml
 characters:
 	player:
 		item:

@@ -1,5 +1,6 @@
 ---
-title: Scenes
+title: Music
+parent: Scenes
 nav_order: 2
 ---
 

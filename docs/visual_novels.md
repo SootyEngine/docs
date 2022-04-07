@@ -5,18 +5,11 @@ nav_order: 100
 ---
 
 # Visual novels
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
 
 ## Projects
+
 - [Visual novel template](https://github.com/teebarjunk/sooty-visual_novel)
 - [Visual novel example](https://github.com/teebarjunk/sooty-visual_novel-example)
-
 
 ## Built in MAIN flows
 

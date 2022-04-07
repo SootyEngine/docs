@@ -1,10 +1,10 @@
 ---
-title: Sprite Animations
-parent: Visual Novels
-nav_order: 10
+title: Camera
+parent: Visual novels
+nav_order: 20
 ---
 
-# Sprite animations
+# Camera
 {: .no_toc }
 
 ## Table of contents

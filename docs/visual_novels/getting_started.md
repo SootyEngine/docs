@@ -1,10 +1,10 @@
 ---
-title: Getting Started
+title: Getting started
 parent: Visual novels
 nav_order: 0
 ---
 
-# Getting Started
+# Getting started
 {: .no_toc .text-delta }
 
 ## Table of contents

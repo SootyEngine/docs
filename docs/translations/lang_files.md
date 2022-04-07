@@ -15,7 +15,7 @@ parent: Translations
 ## Generating
 
 ## Writing
-![](/docs/translations/lang_1.png)
-![](/docs/translations/lang_2.png)
+![](/lang_1.png)
+![](/lang_2.png)
 
 ## Installing
