@@ -5,7 +5,7 @@ nav_order: -1
 ---
 
 # Dialogue files `.soot`
-{: .no_toc .text-delta }
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }

@@ -4,7 +4,7 @@ nav_order: 1000
 ---
 
 # Building
-{: .no_toc .text-delta }
+{: .no_toc }
 
 Make sure to include `*.soot,*.soda,*.sola` files when building.
 

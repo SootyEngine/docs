@@ -7,6 +7,13 @@ nav_order: -1
 # State overview
 {: .no_toc }
 
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+## State overview
 State data is what will be saved from play to play. Things like score, health, character stats, achievements, unlockables...
 
 |Autoload|Data that will...|Folder|Examples|
@@ -15,11 +22,6 @@ State data is what will be saved from play to play. Things like score, health, c
 |`Persistent`|Stay the same each playthrough.|`res://persistent`|Achievements<br>Unlockables|
 
 
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
 
 ## Adding state data
 

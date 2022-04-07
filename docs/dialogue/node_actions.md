@@ -6,13 +6,15 @@ nav_order: 20
 
 # Node actions
 {: .no_toc }
-Node actions are a way to access functions and properties inside of `Nodes` that can be anywhere in the Godot `SceneTree`.
 
 ## Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
+
+## Node actions
+Node actions are a way to access functions and properties inside of `Nodes` that can be anywhere in the Godot `SceneTree`.
 
 ## Adding node actions
 There are two ways the `@` action works:
