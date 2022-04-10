@@ -25,8 +25,8 @@ Everything is treated as a mod.
 |`states/`| `.gd` `.soda`|Node scripts or [data files](./data_files.md)|
 |`persistent/`| `.gd` `.soda`|Node scripts or [data files](./data_files.md)|
 |`scenes/`| `.tscn` `.scn`|[Scenes](../resources/scenes.md)|
-|`audio/music/`| `.wav` `.mp3`, `.ogg`|[Music](../resources/music.md)|
-|`audio/sfx/`| `.wav` `.mp3`, `.ogg`|[Sound](../resources/sfx.md) effects|
+|`audio/music/`| `.wav` `.mp3` `.ogg`|[Music](../resources/music.md)|
+|`audio/sfx/`| `.wav` `.mp3` `.ogg`|[Sound](../resources/sfx.md) effects|
 
 ## User mods
 *TO WRITE UP*
