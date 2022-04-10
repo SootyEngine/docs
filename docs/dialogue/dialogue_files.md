@@ -136,6 +136,28 @@ john (jump): What was that!
 john: What was that!
 ```
 
+## Lists
+
+Lists display one line per visit. So the next time you see them they will be different.
+
+[Learn more](./lists.md)
+
+```
+# pick a random line
+{[rand]}
+    mouse: Eeks
+    cow: Moos
+    dog: Barks
+```
+
+They work in text as well.
+```
+jane: I love {rand:apples|pears|grapes|bananas}[].
+
+# and with bbcode. note only one closing tag would be needed at end.
+jane: I love {rand:[red]apples|[green]pears|[purple]grapes|[yellow]bananas}[].
+```
+
 ## Multi-line dialogue
 For blocks of text where you want whitespace preserved there is `""""`:
 ```
@@ -161,15 +183,16 @@ Not now, not ever.
 """"
 ```
 
-If [translating](../lang/lang_files.md), add the `#id=` on the first line.
+<!-- {% raw %} -->
+If [translating](../lang/lang_files.md#line-ids), add the `#{}` on the first line.
 ```
-paul: """"  #id=long_intro
+paul: """"  #{long_intro}
 Once upon a time, a long time ago
   there lived a king
     in a castle...
 """"
 ```
-
+<!-- {% endraw %} -->
 
 ## Meta keys
 
@@ -180,15 +203,40 @@ Files can have meta data for some internal uses.
 |`#.IGNORE`|Don't load this dialogue. Useful for debugging.|`#.IGNORE`|
 |`#.id`|Manually set an id, instead of using file name.|`#.id: new_name`|
 
+## Multi file
+
+Multiple dialogues can exist in one document.
+
+Seperate them with `---` and use `#.id: dialogue_id`
+
+```
+#swamps.soot
+
+=== start
+  Where to?
+    |> Swamp castle. => swamp_castle/start
+
+
+---
+#.id: swamp_castle
+
+=== start
+    I never knew there was a castle in this swamp.
+```
+
 ## Symbol cheat sheet
 
 |Pattern|About|Example|
 |-----|-----|-------|
+|`---`|New document.|
 |`# comment`|These are just for you, and are ignored by the system.|`# TODO: Rewrite these lines.`|
+|`#.meta`|File meta properties.|`#.id: dialogue_id`|
+|`#{line_id}`|Line ids. Used for translations, lists, and choices.||
 |`=== flow id`|The start of a flow; a series of steps to run through.|`=== chapter_1`|
 |`text`|Text to show the user.|`Once upon a time...`|
 |`name: text`|Text with a speaker.|`robot: Are you sure about this?`|
-|`- option text`|An option for a menu.|`- Yes, take me there.`|
+|`\|> option text`|Option for a menu.|`\|> Yes, take me there.`|
+|`+> option text`|Options insert menu.|`+> quest_*`|
 |`=> flow_id`|Goto a flow.|`=> chapter_2`|
 |`=> soot_id/flow_id`|Goto a flow in a different file.|`=> day_2/morning`|
 |`== flow_id`|Call a flow, then return back to this line.|`== describe_scene`|
@@ -196,6 +244,10 @@ Files can have meta data for some internal uses.
 |`><`|End the current flow. If called from a `==`, this returns, otherwise ends the dialogue.|`><`|
 |`>><<`|End the dialogue. Optionally you can pass a message that will be signaled.|`>><< end_msg`|
 |`__`|Does nothing. Represents an empty step in the flow.|`__`|
+|`(())`|Add's properties to a line.|`((flag pos:20,30 tint:red))`|
+|`\|\|`|Add following lines below self.|`\|> Go west. \|\| You travel west. \|\| @sfx wind_blows`
+|`{% raw %}{[list_type]}{% endraw %}`|List.|` `|
+|`> command`||
 |`@node.function`|Call's a node group function.|`@damage player 20 fire:true`|
 |`$state.function`|Call's a state function.|`$player.damage 20 fire:true`|
 |`~state evaluation`|Evaluates an expression on state data.|`~score += 20 * score_multiplier(player.stats)`

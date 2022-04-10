@@ -26,7 +26,7 @@ They are a way of introducing more randomness and diversity to a common bit of d
 <img style="float: right; max-width: 50%;" src="./list_default.png"/>
 
 ```
-# default type runs through each line then repeat
+# default will runs through each line then starts over
 {[]}
     orc: Tis Monday, isn't it?
     orc: Tuesday, *snoozeday.*
@@ -38,7 +38,7 @@ They are a way of introducing more randomness and diversity to a common bit of d
 ```
 
 ```
-# 'rand' type picks a line at random.
+# 'rand' picks a line at random.
 {[rand]}
     orc: Greetings.
     orc: Hello.
@@ -48,7 +48,7 @@ They are a way of introducing more randomness and diversity to a common bit of d
 <img style="float: right; max-width: 50%;" src="./list_stop.png"/>
 
 ```
-# 'stop' will run through all lines, then stop on the last
+# 'stop' runs through all lines, then always show the last
 {[stop]}
     @mined_gold 30
     @mined_gold 10
