@@ -1,6 +1,5 @@
 ---
 title: String actions
-has_children: true
 nav_order: 500
 ---
 
