@@ -33,14 +33,18 @@ Examples:
 
 The following are built in.
 
-|Name|Desc|Example|
+|Name|Desc|Examples|
 |----|----|-------|
+|`@Dialogue`|Dialogue autoload.|`@Dialogue.reset_list(id)`
 |`@Music`|Music autoload.|`@Music.play song`<br>`@Music.stop_all`<br>`@Music.current`|
 |`@SFX`|Sound effects autoload.|`@SFX.play coin`
 |`@Scene`|Scene autoload.|`@Scene.goto`
 |`@scene`|Current scene.<br>Automatically set whenever a scene is made current.
 |`@msg`|Emits:<br>`Global.message(id: String, payload: Variant)`|`@msg msg_id true`
-|`@version`|Returns current Sooty version.|`@version`
+|`@version`|Returns current Sooty version.|`@version`|
+|`@show_caption`|Called internally.|`@show_caption dog "Bark bark bark."`
+|`@hide_caption`|Called internally.|
+|`@captioner`|Set the current captioner, if there are more than one.|`@captioner top_left`
 
 ## Arguments
 Arguments are seperated by spaces.

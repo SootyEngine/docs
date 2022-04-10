@@ -33,3 +33,10 @@ If there is a `.soot` with the same `id` as the current scene, these will be cal
 ||`scene_started`|Scene entered, and no other flow is running.||
 
 :o: = No text in this flow will be displayed. It's meant for calling functions based on State conditions.
+
+## Node actions
+See [here](./dialogue/node_actions.md)
+
+|Action|Desc|Examples|
+|------|----|--------|
+|`@VN` |The `VisualNovel` autoload.|`@VN.version`|

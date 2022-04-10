@@ -19,7 +19,7 @@ They have automatic type conversion and `kwargs`.
 
 ### Type Conversion
 The type conversion works off looking at the way you wrote you're function, so please be explicit.
-```
+```gd
 # not ideal. StringActions will have to assume.
 func my_func(x, y):
     pass
@@ -37,7 +37,9 @@ func my_func(x: String = "", y: bool = false):
 Inspired by Python because I really like `kwargs` (Key word arguments).
 
 They allow you to skip over default arguments and are more obvious/explicit about what is happening:
-```
+
+*The last argument needs to be named `kwargs` to work.* 
+```gd
 # here is our function
 func doit(a: String, b := false, c := true, kwargs := {}):
     pass
