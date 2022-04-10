@@ -158,6 +158,26 @@ jane: I love {rand:apples|pears|grapes|bananas}[].
 jane: I love {rand:[red]apples|[green]pears|[purple]grapes|[yellow]bananas}[].
 ```
 
+## Inserts
+
+To make stylized lines easier to read and write, there are inserts:
+
+*WARNING:* The whitespace on their sides is stripped before inserting.
+
+<img style="float: right; max-width: 50%;" src="./inserts.png"/>
+
+```
+# this is hard to read and write
+mary: I love {rand|[red]apples[]|[purple]grapes[]|[yellow]bananas[]}, don't you?
+
+# here is the same line, using inserts
+mary: I love &abc, don't you?
+    &abc={rand|&a|&b|&c}  # now we can see &abc will be a 'list'
+    &a=[red]apples[]      # it's items easier to read and style
+    &b=[purple]grapes[]
+    &c=[yellow]bananas[]
+```
+
 ## Multi-line dialogue
 For blocks of text where you want whitespace preserved there is `""""`:
 ```
@@ -235,6 +255,7 @@ Seperate them with `---` and use `#.id: dialogue_id`
 |`=== flow id`|The start of a flow; a series of steps to run through.|`=== chapter_1`|
 |`text`|Text to show the user.|`Once upon a time...`|
 |`name: text`|Text with a speaker.|`robot: Are you sure about this?`|
+|`&id=text`|Inserts itself into parent text.|`&name=[b;deep_blue_sky]Mr. Blue[]`
 |`\|> option text`|Option for a menu.|`\|> Yes, take me there.`|
 |`+> option text`|Options insert menu.|`+> quest_*`|
 |`=> flow_id`|Goto a flow.|`=> chapter_2`|

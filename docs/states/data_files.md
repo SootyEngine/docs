@@ -7,7 +7,7 @@ nav_order: 0
 # Data files `*.soda`
 {: .no_toc }
 
-Inspired by YAML, but designed for Godot, Sooty Data Files, or `.soda`, are a way to more easily define data.
+Inspired by YAML, but designed for Godot, **So**oty **Da**ta files, or `.soda`, are a way to more easily define data.
 
 ## Table of contents
 {: .no_toc .text-delta }

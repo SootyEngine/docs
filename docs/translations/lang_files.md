@@ -12,6 +12,9 @@ parent: Translations
 1. TOC
 {:toc}
 
+## About
+**So**oty **La**nguage files `*.sola` are for translating or modifying lines in existing dialogue files `*.soot`.
+
 ## Generating
 
 ## Writing
@@ -50,11 +53,11 @@ Are you sure? #{ask} || |> Yes, take me there. #{choose_y} || |> No, I could be 
 # You can call Dialogue.reset_list("stop_1") now to reset.
 
 Do you want the dog or cat?
-  |> Cat #{chose_cat}
-  |> Dog #{chose_dog}
-  |> Return cat {{@chose chose_cat}}
+  - Cat #{chose_cat}
+  - Dog #{chose_dog}
+  - Return cat {{@chose chose_cat}}
       @reset_choice chose_cat
-  |> Return dog {{@chose chose_dog}}
+  - Return dog {{@chose chose_dog}}
       @reset_choice chose_cat
 ```
 
