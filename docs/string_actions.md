@@ -3,7 +3,60 @@ title: String actions
 nav_order: 500
 ---
 
-*TO WRITE*
+# String actions
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+## About
+The `StringActions` autoload allow doing all kinds of things with simple commands.
+
+They have automatic type conversion and `kwargs`.
+
+### Type Conversion
+The type conversion works off looking at the way you wrote you're function, so please be explicit.
+```
+# not ideal. StringActions will have to assume.
+func my_func(x, y):
+    pass
+
+# better. default arguments can be used to assume.
+func my_func(x := "", y := false):
+  pass
+
+# ideal. no guessing on what type is needed.
+func my_func(x: String = "", y: bool = false):
+    pass
+```
+
+### kwargs
+Inspired by Python because I really like `kwargs` (Key word arguments).
+
+They allow you to skip over default arguments and are more obvious/explicit about what is happening:
+```
+# here is our function
+func doit(a: String, b := false, c := true, kwargs := {}):
+    pass
+
+# we will add it as a command
+StringActions.add_command(doit)
+
+# from Godot
+StringActions.do_command("doit x tint:blue")
+StringActions.do_command_w_args("doit", ["x", {"tint": "blue"}])
+
+# from Dialogue
+>doit x tint:blue
+```
+
+All those calls will evaluate to
+```
+doit("x", false, true, {"tint": "blue"})
+```
 
 ## `>` Commands
 
