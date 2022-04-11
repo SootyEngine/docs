@@ -27,7 +27,7 @@ They are a way of introducing more randomness and diversity to a common bit of d
 
 ```
 # default will runs through each line then starts over
-{[]}
+{<>}
     orc: Tis Monday, isn't it?
     orc: Tuesday, *snoozeday.*
     orc: What day is-- *oh*, Wednesday.
@@ -39,7 +39,7 @@ They are a way of introducing more randomness and diversity to a common bit of d
 
 ```
 # 'rand' picks a line at random.
-{[rand]}
+{<rand>}
     orc: Greetings.
     orc: Hello.
     orc: Nice day, isn't it?
@@ -49,7 +49,7 @@ They are a way of introducing more randomness and diversity to a common bit of d
 
 ```
 # 'stop' runs through all lines, then always show the last
-{[stop]}
+{<stop>}
     @mined_gold 30
     @mined_gold 10
     @mined_gold 3
@@ -62,10 +62,10 @@ They are a way of introducing more randomness and diversity to a common bit of d
 # 'hide' will run through all lines, then never show anything
 {[hide]}
     There is a basket.
-        |> Take it
+        >>> Take it
             @gold 100
             Dubloons!?
-        |> Ignore it for later
+        >>> Ignore it for later
 
 # this choice will never be available again
 # unless you call Dialogue.reset_list(line_id)
@@ -78,7 +78,7 @@ They are a way of introducing more randomness and diversity to a common bit of d
 To include multiple steps in a list item, use the inline `==`.
 ```
 You find a...
-{[rand]}
+{<rand>}
     ==
         Box of toads.
         @SFX.play frog_ribbit
@@ -98,7 +98,7 @@ The `||` pattern may be handy: it inserts tabbed lines from the current one.
 
 ```
 You find a...
-{[rand]}
+{<rand>}
     ==||Box of toads.
         @SFX.play frog_ribbit
         p: I don't need this.
@@ -115,7 +115,7 @@ You can do it all one line, but I think it's messy.
 
 ```
 You find a...
-{[rand]}
+{<rand>}
     ==||Box of toads.||@SFX.play frog_ribbit||p: I don't need this.
     ==||Box of carrots.||p: Hmm.||~carrots += 1
     ==||Spike of death!||p: Ouch!||~health -= 1
@@ -124,18 +124,18 @@ You find a...
 ### In text
 Text can have lists by using the pattern:
 ```
-{list_type|item1|item2|item3|item4}
+<list_type|item1|item2|item3|item4>
 ```
 
 Whitespace between items is trimmed, but whitespace outside is kept.
 ![](./list_text.png)
 ```
-mary: I love {rand| [red]apples[] | [purple]grapes[] | [yellow]bananas[]}, don't you?
+mary: I love <rand| [red]apples[] | [purple]grapes[] | [yellow]bananas[]>, don't you?
 ```
 
 It works in the speaker tag:
 ```
-{rand|npc1|npc2|npc3}: {rand|Hello.|Fine day?|Out of my way!}
+<rand|npc1|npc2|npc3>: <rand|Hello.|Fine day?|Out of my way!>
 ```
 
 #### Nesting

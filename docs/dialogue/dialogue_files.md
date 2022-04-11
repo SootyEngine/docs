@@ -144,7 +144,7 @@ Lists display one line per visit. So the next time you see them they will be dif
 
 ```
 # pick a random line
-{[rand]}
+{<rand>}
     mouse: Eeks
     cow: Moos
     dog: Barks
@@ -152,10 +152,10 @@ Lists display one line per visit. So the next time you see them they will be dif
 
 They work in text as well.
 ```
-jane: I love {rand:apples|pears|grapes|bananas}[].
+jane: I love <rand|apples|pears|grapes|bananas>[].
 
 # and with bbcode. note only one closing tag would be needed at end.
-jane: I love {rand:[red]apples|[green]pears|[purple]grapes|[yellow]bananas}[].
+jane: I love <rand|[red]apples|[green]pears|[purple]grapes|[yellow]bananas>[].
 ```
 
 ## Inserts
@@ -168,11 +168,11 @@ To make stylized lines easier to read and write, there are inserts:
 
 ```
 # this is hard to read and write
-mary: I love {rand|[red]apples[]|[purple]grapes[]|[yellow]bananas[]}, don't you?
+mary: I love <rand|[red]apples[]|[purple]grapes[]|[yellow]bananas[]>, don't you?
 
 # here is the same line, using inserts
 mary: I love &abc, don't you?
-    &abc={rand|&a|&b|&c}  # now we can see &abc will be a 'list'
+    &abc=<rand|&a|&b|&c>  # now we can see &abc will be a 'list'
     &a=[red]apples[]      # it's items easier to read and style
     &b=[purple]grapes[]
     &c=[yellow]bananas[]
@@ -256,8 +256,8 @@ Seperate them with `---` and use `#.id: dialogue_id`
 |`text`|Text to show the user.|`Once upon a time...`|
 |`name: text`|Text with a speaker.|`robot: Are you sure about this?`|
 |`&id=text`|Inserts itself into parent text.|`&name=[b;deep_blue_sky]Mr. Blue[]`
-|`\|> option text`|Option for a menu.|`\|> Yes, take me there.`|
-|`+> option text`|Options insert menu.|`+> quest_*`|
+|`>>> option text`|Option for a menu.|`\|> Yes, take me there.`|
+|`+>> option text`|Options insert menu.|`+> quest_*`|
 |`=> flow_id`|Goto a flow.|`=> chapter_2`|
 |`=> soot_id/flow_id`|Goto a flow in a different file.|`=> day_2/morning`|
 |`== flow_id`|Call a flow, then return back to this line.|`== describe_scene`|
@@ -266,10 +266,12 @@ Seperate them with `---` and use `#.id: dialogue_id`
 |`>><<`|End the dialogue. Optionally you can pass a message that will be signaled.|`>><< end_msg`|
 |`__`|Does nothing. Represents an empty step in the flow.|`__`|
 |`(())`|Add's properties to a line.|`((flag pos:20,30 tint:red))`|
-|`\|\|`|Add following lines below self.|`\|> Go west. \|\| You travel west. \|\| @sfx wind_blows`
+|`\|\|`|Add following lines below self.|`>>> Go west. \|\| You travel west. \|\| @sfx wind_blows`
 |`{% raw %}{[list_type]}{% endraw %}`|List.|` `|
 |`> command`||
 |`@node.function`|Call's a node group function.|`@damage player 20 fire:true`|
 |`$state.function`|Call's a state function.|`$player.damage 20 fire:true`|
-|`~state evaluation`|Evaluates an expression on state data.|`~score += 20 * score_multiplier(player.stats)`
-|`{% raw %}{{condition}}{% endraw %}`|For only displaying lines that pass.|`mary: Oh wow, you brought it. {% raw  %}{{talked_to_mary and player.item_count("spoon") > 1}}{% endraw  %}`|
+|`~state evaluation`|Evaluates an expression on state data.|`~score += 20 * score_multiplier(player.stats)`|
+|`*varout`|Returns a var.<br>Useful for state machines and `MATCH`.|`{% raw %}*true 0.1 tint:blue on:true`<br>Will output:<br>`[true, 0.1, {"tint"="blue", "on":true}{% endraw %}`|
+|`{% raw %}{{condition}}{% endraw %}`|For only displaying lines that pass.|`mary: Oh wow, you brought it. {% raw %}{{talked_to_mary and player.item_count("spoon") > 1}}{% endraw  %}`|
+|`{% raw %}{(case)}{% endraw %}`|Case. Used with `MATCH`.||
