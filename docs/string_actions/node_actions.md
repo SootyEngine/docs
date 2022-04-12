@@ -1,6 +1,6 @@
 ---
 title: Node actions
-parent: Dialogue
+parent: String actions
 nav_order: 20
 ---
 

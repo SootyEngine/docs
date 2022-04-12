@@ -1,5 +1,6 @@
 ---
 title: String actions
+has_children: true
 nav_order: 500
 ---
 
@@ -38,7 +39,7 @@ Inspired by Python because I really like `kwargs` (Key word arguments).
 
 They allow you to skip over default arguments and are more obvious/explicit about what is happening:
 
-*The last argument needs to be named `kwargs` to work.* 
+*The last argument needs to be named `kwargs` to work.*
 ```gd
 # here is our function
 func doit(a: String, b := false, c := true, kwargs := {}):
@@ -58,6 +59,39 @@ StringActions.do_command_w_args("doit", ["x", {"tint": "blue"}])
 All those calls will evaluate to
 ```
 doit("x", false, true, {"tint": "blue"})
+```
+
+## Symbols
+There are 3 *contexts* and 2 *patterns*.
+|Context|Symbol|Desc|
+|------:|:----:|----|
+|State|`$`|The main State class|
+|Nodes|`@`|Nodes in the SceneTree|
+|Self|`~`|(Used for [state machines](./state_machines.md))|
+
+|Pattern|Symbol|Desc|Example|
+|------:|:----:|----|-------|
+|Evaluate|`:`|Evaluates an expression|`@:player.health += 10`
+|Function|`)`|Calls an action with args|`@)player.heal 10 spd:2`
+
+- `$` defaults to `$:`
+- `@` defaults to `@)`
+- `~` defaults to `~:`
+
+### Actions
+Actions are designed to be quick to type.
+```
+@camera_zoom 2
+@Music.play my_song
+@damage enemy1,enemy2 3 poison:true
+@reset_score
+```
+
+### Evaluate
+Evaluations are more robust, but lengthier to type.
+```
+$score += score_calculator(true, 3)
+$damage(["enemy1", "enemy2"], 3, {"poison": true})
 ```
 
 ## `>` Commands

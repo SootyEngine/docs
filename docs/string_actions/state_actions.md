@@ -1,6 +1,6 @@
 ---
 title: State actions
-parent: Dialogue
+parent: String actions
 nav_order: 30
 ---
 
