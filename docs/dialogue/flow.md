@@ -22,24 +22,50 @@ To go to another flow in the file, use `=> other_flow`.
 To call another flow, and then return to where we are, use `== other_flow`.  
 This is useful for having common lines:
 
+They work like the Godot `NodePath` or a file system.
+- `.sibling`
+- `..parent`
+- `child`
+- `/root_level`
+- `/root_level/child`
+- `..parent/child`
+```
+=== top_level
+    === child_flow
+        Once upon a time.
+        => .next_child
+
+    === next_child
+        There lived a bird.
+        => /other_top_level/child
+
+=== other_top_level
+    === child
+        The bird was cool.
+        => my_child
+
+        === my_child
+            The end.
+```
+
 ```
 === monday
-    == start_of_day
+    == .start_of_day
 
     Time to get to class.
 
     # do a bunch of stuff here
 
-    == end_of_day
+    == .end_of_day
 
 === tuesday
-    == start_of_day
+    == .start_of_day
 
     Today is the big day.
 
     # do a bunch of stuff here
 
-    == end_of_day
+    == .end_of_day
 
 === start_of_day
     ~money_at_start = money
